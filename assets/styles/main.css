@@ -1,13 +1,13 @@
-*{
+* {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 :root {
-  --main-color: #458FF6;
+  --main-color: #458ff6;
   --title-color: #000000;
-  --text-color: #7D7987;
+  --text-color: #7d7987;
   --alt-text-color: #ffffff;
   --h1-size: 48px;
   --h2-size: 36px;
@@ -32,5 +32,85 @@
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
+  }
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+header .continer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+header .continer h1 {
+  font-size: 30px;
+}
+header .continer h1 span {
+  display: inline-block;
+  margin-right: 7px;
+  padding: 5px 10px;
+  width: 40px;
+  height: 40px;
+  color: var(--alt-text-color);
+  background-color: var(--main-color);
+  border-radius: 50%;
+}
+header .continer nav ul {
+  display: none;
+}
+header .continer nav ul li {
+  padding: 7px;
+  border-bottom: 1px solid var(--text-color);
+  text-align: start;
+}
+header .continer nav ul li a {
+  color: var(--alt-text-color);
+}
+header .continer nav label,
+header .continer nav input {
+  cursor: pointer;
+  appearance: none;
+}
+header .continer nav input:checked + ul {
+  display: block;
+  position: absolute;
+  padding: 5px;
+  background-color: #458ff6;
+  border-radius: 5px;
+}
+@media (max-width: 550px) {
+  header .continer nav ul {
+right: 30px;
+  }
+}
+@media (max-width: 400px) {
+  header .continer nav ul {
+right: 10px;
+  }
+}
+@media (min-width: 992px) {
+  header .continer nav ul {
+    display: flex;
+  }
+  header .continer nav ul li a {
+    color: var(--text-color);
+    
+  }
+  header .continer nav ul li {
+    border: none;
+    padding-right: 15px;
+  }
+  header .continer nav label,
+  header .continer nav input {
+    display: none;
   }
 }
